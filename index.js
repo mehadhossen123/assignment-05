@@ -11,3 +11,28 @@ for(let heart of allHeart){
         
     })
 }
+
+
+
+// Button and alert and calling function is here 
+const allButton = document.getElementsByClassName("all-button");
+ for(let eachButton  of allButton ){
+    eachButton.addEventListener('click',function(){
+         const title=eachButton.parentNode.parentNode.children[1].innerText;
+        
+          const allNumber = eachButton.parentNode.parentNode.children[2].innerText;
+          
+          alert('📞'+"Calling"+title+allNumber+'...');
+          
+          const beforeCoin = parseInt(
+            document.getElementById("before-coin").innerText
+          );
+           
+          
+          
+         
+        
+    })
+
+ }
+
