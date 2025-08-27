@@ -69,4 +69,26 @@ const allButton = document.getElementsByClassName("all-button");
     })
 
  }
+//  clear card button here 
+ document.getElementById("clear-botton").addEventListener('click',function(){
+       const storyContainer = document.getElementById("story-add");
+       storyContainer.innerHTML=" ";
+
+    
+ });
+
+
+//  for copy number in Clipboard
+
+const allCopyButton = document.getElementsByClassName("copy-btn");
+for(let button of allCopyButton){
+    button.addEventListener('click',function(){
+        
+       const number=button.parentNode.parentNode.children[2].innerText;
+       navigator.clipboard.writeText(number);
+       alert(' Number Copied'+ " "+number);
+      
+        
+    })
+}
 
